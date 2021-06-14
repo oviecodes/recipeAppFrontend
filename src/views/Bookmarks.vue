@@ -68,7 +68,7 @@
                 // console.log(itemIndex)
                 this.bookmarks.splice(itemIndex, 1)
                 window.localStorage.setItem('bookmarks', JSON.stringify(this.bookmarks))
-                await this.axios.delete(`http://localhost:1337/bookmarks/${item.id}`, {
+                await this.axios.delete(`https://strapi-recipee-app.herokuapp.com/bookmarks/${item.id}`, {
                     headers: {
                         Authorization: `Bearer ${window.localStorage.getItem('jwt')}`,
                     },

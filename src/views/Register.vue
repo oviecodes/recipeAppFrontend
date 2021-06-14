@@ -70,7 +70,7 @@
             async register(e) {
                 try {
                     e.preventDefault()
-                        const newUser = await this.axios.post(`http://localhost:1337/auth/local/register`, {
+                        const newUser = await this.axios.post(`https://strapi-recipee-app.herokuapp.com/auth/local/register`, {
                         name: this.name,
                         password: this.password,
                         email: this.email,

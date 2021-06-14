@@ -55,7 +55,7 @@
         methods: {
             async forgotPassword(e) {
                 e.preventDefault()
-                this.axios.post(`http://localhost:1337/auth/forgot-password`, {
+                this.axios.post(`https://strapi-recipee-app.herokuapp.com/auth/forgot-password`, {
                     email: this.email
                 })
                 .then((res) => {

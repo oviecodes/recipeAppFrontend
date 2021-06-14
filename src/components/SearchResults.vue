@@ -74,7 +74,7 @@
                         //set to localstorage
 
                         window.localStorage.setItem('bookmarks', JSON.stringify(this.bookmarks))
-                        await this.axios.post(`http://localhost:1337/bookmarks`, {
+                        await this.axios.post(`https://strapi-recipee-app.herokuapp.com/bookmarks`, {
                             ...bookmarkItem,
                         }, 
                         {
@@ -83,7 +83,7 @@
                             },
                         })
 
-                        const res = await this.axios.get(`http://localhost:1337/users/${bookmarkItem.users_permissions_user}`, {
+                        const res = await this.axios.get(`https://strapi-recipee-app.herokuapp.com/users/${bookmarkItem.users_permissions_user}`, {
                             headers: {
                                 Authorization: `Bearer ${window.localStorage.getItem('jwt')}`,
                             }

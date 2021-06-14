@@ -65,7 +65,7 @@
             async login(e) {
                 e.preventDefault()
                 try {
-                    const res = await this.axios.post(`http://localhost:1337/auth/local`, {
+                    const res = await this.axios.post(`https://strapi-recipee-app.herokuapp.com/auth/local`, {
                         identifier: this.email,
                         password: this.password
                     });
