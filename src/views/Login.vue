@@ -57,7 +57,7 @@
                 email: '',
                 password: '',
                 error: false,
-                errorMsg: `Invalid credentials`
+                errorMsg: `An error occurred, please try again`
             }
         },
 
@@ -79,7 +79,7 @@
                     this.$router.push('/')
                 } catch(error) {
                     this.error = true
-                    this.email = ''
+                    this.password = ''
                 }
             },
 

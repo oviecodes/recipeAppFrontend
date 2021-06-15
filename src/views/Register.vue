@@ -62,7 +62,7 @@
                 password: '',
                 username: '',
                 error: false,
-                errorMsg: `A user with that e-mail already exists`
+                errorMsg: `An Error occurred, please try again`
             }
         },
 
@@ -70,7 +70,7 @@
             async register(e) {
                 try {
                     e.preventDefault()
-                        const newUser = await this.axios.post(`https://strapi-recipee-app.herokuapp.com/auth/local/register`, {
+                        await this.axios.post(`https://strapi-recipee-app.herokuapp.com/auth/local/register`, {
                         name: this.name,
                         password: this.password,
                         email: this.email,
@@ -79,7 +79,7 @@
                     this.$router.push('login')
                 } catch(e) {
                     this.error = true
-                    console.log(e)
+                    this.email = ''
                 } 
             }
         }
