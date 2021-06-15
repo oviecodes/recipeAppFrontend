@@ -20,6 +20,7 @@
                     </h1>
 
                     <p v-show="done" class="text-sm text-green-500">Password reset link has been sent to {{ email }}</p>
+                    <p v-show="error" class="text-sm text-red-500">An error occurred</p>
 
                     <form @submit="forgotPassword">
                         <div class="my-5">
@@ -55,11 +56,12 @@
         methods: {
             async forgotPassword(e) {
                 e.preventDefault()
+                this.done = false;
+                this.error = false;
                 this.axios.post(`https://strapi-recipee-app.herokuapp.com/auth/forgot-password`, {
                     email: this.email
                 })
                 .then((res) => {
-                    console.log(res)
                     this.done = true
                 })
                 .catch(e => {

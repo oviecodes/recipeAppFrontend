@@ -89,8 +89,6 @@
                             }
                         })
 
-                        console.log('me',res)
-
                         const user  = res.data
 
                         window.localStorage.setItem('userData', JSON.stringify(user))

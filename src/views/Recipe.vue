@@ -69,8 +69,6 @@
         created() {
            const recipeItem =  this.getSearchResults.find(item => item.recipe.label === this.name)
            this.curRecipe = recipeItem.recipe
-           console.log(this.curRecipe)
-           console.log(this.curRecipe.ingredientLines.length)
         } 
     }
 </script>

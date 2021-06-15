@@ -68,7 +68,6 @@
                     passwordConfirmation: this.confirmPassword
                 })
                 .then((res) => {
-                    console.log(res)
                     this.done = true
                     this.$router.push("login")
                 })

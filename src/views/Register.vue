@@ -76,7 +76,6 @@
                         email: this.email,
                         username: this.username
                     })
-                    console.log(newUser)
                     this.$router.push('login')
                 } catch(e) {
                     this.error = true
